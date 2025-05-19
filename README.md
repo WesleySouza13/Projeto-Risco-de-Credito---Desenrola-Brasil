@@ -3,7 +3,7 @@
 O Desenrola Brasil, ou simplesmente "desenrola", é um programa implementado pelo ministerio da fazenda que visa a renegociação de dívidas de natureza privada de pessoas físicas inscritas em cadastro de inadimplentes, bem como a redução do endividamento e facilitação de acesso ao mercado de crédito pelas mesmas. 
 
 ## Objetivo: 
-# O governo e instituições financeiras precisam prever o volume de renegociações para se organizarem com antecedência, direcionarem campanhas e alocar recursos com precisão.
+ O governo e instituições financeiras precisam prever o volume de renegociações para se organizarem com antecedência, direcionarem campanhas e alocar recursos com precisão.
 Com isso, temos os seguintes pontos:
 
 - Criar um modelo confiável para prever o volume financeiro;
@@ -12,7 +12,7 @@ Com isso, temos os seguintes pontos:
 
   ## Base de Dados
 
-# Deixarei a base de dados na pasta "data" deste repositório.
+ Deixarei a base de dados na pasta "data" deste repositório.
 
 
 # Explicação das Variáveis
