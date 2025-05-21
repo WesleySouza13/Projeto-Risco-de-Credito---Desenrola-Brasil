@@ -19,9 +19,14 @@ Com isso, temos os seguintes pontos:
 DATA_BASE: Data de referência em que o dado foi coletado 
 
 TIPO_DESENROLA: Categoria ou modalidade da renegociação dentro do programa Desenrola Brasil
+
 UNIDADE_FEDERACAO: Unidade da Federação (UF) onde a operação foi registrada
+
 COD_CONGLOMERADO_FINANCEIRO: Identificador numérico único do conglomerado financeiro participante da renegociação
+
 NOME_CONGLOMERADO_FINANCEIRO: Nome do conglomerado financeiro (banco ou instituição) (público ou privado) envolvido na renegociação
+
 NUMERO_OPERACOES: Quantidade total de operações de renegociação realizadas no mês
+
 VOLUME_OPERACOES: Volume financeiro total (em reais) das operações realizadas no período.
 
