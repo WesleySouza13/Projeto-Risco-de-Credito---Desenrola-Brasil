@@ -50,6 +50,30 @@ O dado apresentado revela que o Nubank lidera com folga o ranking de volume de n
 
 Esse cenário reforça a atuação agressiva do Nubank no segmento de crédito e renegociação de dívidas, reflexo de sua grande base de clientes, forte presença digital e políticas de crédito mais acessíveis, que muitas vezes levam a um volume maior de renegociações.
 
+# Estados com maior volume de renegociações:
+
+![image](https://github.com/user-attachments/assets/66c51616-a424-448d-85fd-4868259f22cd)
+
+Como o gráfico já deixa explícito, o volume de operações em São Paulo é esmagador em relação aos outros estados, o que evidencia a forte concentração econômica e populacional na região.
+
+# Comportamento temporal do volume de operações:
+
+# Série: 
+
+![image](https://github.com/user-attachments/assets/372cdd01-9b0f-4bf3-b7a8-22909317be88)
+
+O gráfico mostra uma instabilidade em relação ao volume de operações entre as datas de novembro de 2023 e junho de 2024. No entanto, observa-se uma melhora a partir do meio de 2024 e mais acentuadamente no final do ano. Uma variável que pode explicar esse comportamento é a sazonalidade, como o pagamento do 13º salário no segundo semestre, que amplia a capacidade de quitação de dívidas, além de fatores culturais e psicológicos, como a superstição de não terminar o ano com pendências financeiras.
+
+# Distribuição Temporal: Tendecia do volume
+
+![image](https://github.com/user-attachments/assets/95504a58-95d1-4d24-bf3c-9548a0f21b1e)
+
+# Sazonalidade:
+
+![image](https://github.com/user-attachments/assets/a72e1c11-03c5-4a66-ac5d-4f3e41147256)
+
+O gráfico de sazonalidade corrobora a análise que fizemos sobre o comportamento da série, evidenciando padrões recorrentes que explicam as variações no volume de operações ao longo do tempo.
+
 
 
 
