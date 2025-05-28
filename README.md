@@ -30,3 +30,28 @@ NUMERO_OPERACOES: Quantidade total de operações de renegociação realizadas n
 
 VOLUME_OPERACOES: Volume financeiro total (em reais) das operações realizadas no período.
 
+
+# Entendimento das variáveis:
+
+# Bancos com maiores frequencia no programa: 
+
+![image](https://github.com/user-attachments/assets/639855e8-ae46-489b-b354-ced60759a22b)
+
+O Bradesco foi o banco que mais apareceu entre os participantes do programa desenrola. 
+
+
+# Bancos com maior volume de operações:
+
+![image](https://github.com/user-attachments/assets/5c21b6f9-fe2f-41fd-b956-966c6d912ffe)
+
+O banco Nubank apresenta um volume de negociações de dívidas esmagador em relação aos demais bancos.
+
+O dado apresentado revela que o Nubank lidera com folga o ranking de volume de negociações de dívidas, com 547.423 transações. Esse número é significativamente superior ao da Caixa Econômica Federal, que ocupa o segundo lugar com 400.810 negociações. Em seguida, aparecem o BTG Pactual (332.136), o Itaú (318.524) e o Santander (298.376).
+
+Esse cenário reforça a atuação agressiva do Nubank no segmento de crédito e renegociação de dívidas, reflexo de sua grande base de clientes, forte presença digital e políticas de crédito mais acessíveis, que muitas vezes levam a um volume maior de renegociações.
+
+
+
+
+
+
