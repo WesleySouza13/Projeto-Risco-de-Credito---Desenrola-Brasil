@@ -78,7 +78,49 @@ O gráfico mostra uma instabilidade em relação ao volume de operações entre 
 
 O gráfico de sazonalidade corrobora a análise que fizemos sobre o comportamento da série, evidenciando padrões recorrentes que explicam as variações no volume de operações ao longo do tempo.
 
+# Volatidade da Série:
 
+A volatilidade da série explica os desvios observados ao longo do tempo. A seguir, apresentamos o gráfico que fundamenta o nosso estudo.
+
+![image](https://github.com/user-attachments/assets/01bae4fd-a039-428c-94f4-ae5bc6a7923a)
+
+# Gráficos de Autocorrelação: 
+
+Explicando autocorrelaçao de forma mais básica possivel: 
+
+Esse tipo de vizualizaçao nos mostra o comportamento de ontem em relaçao a hoje, ou seja, "qual é a correlaçao de ontem comparado a hoje?".
+
+Por exemplo:
+
+Se eu sou alto hoje, será que amanhã também serei alto?
+
+- O eixo X explica os dias passados (autocorrelaçao até 30 dias)
+
+- O Y explica o nível de autocorrelaçao (-1 a 1)
+
+  ![image](https://github.com/user-attachments/assets/386fc3f1-bc16-49b6-92bb-9c6e51e8a57f)
+
+  Explicando resultados:
+
+  **TIPO_DESENROLA:**
+
+- Os dias apresentam boa autocorrelaçao, variando pouco ou quase nada em relaçao ao tempo. Se depender apenas dessa variável, podemos trabalhar com modelos recorrentes. 
+
+**COD_CONGLOMERADO_FINANCEIRO**
+
+ - O passado apresenta autocorrelação, porém baixa. Com o tempo, essa autocorrelação some. 
+
+ **NUMERO_OPERACOES**
+
+ - Mesma lógica da última coluna, a autocorrelação some com o tempo. 
+
+ **VOLUME_OPERACOES** 
+
+ - Autocorrelação fraca, também some com o tempo. 
+
+ **MEDIA_OPERACOES**
+
+ - Boa autocorrelação, que se mantém constante durante um tempo. Mas nao apresenta um score muito significativo. 
 
 
 
