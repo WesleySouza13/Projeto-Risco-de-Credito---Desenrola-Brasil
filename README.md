@@ -252,3 +252,34 @@ A Árvore de Decisão apresentou um score médio alto (0.7813), o que indica uma
 XGBoost:
 
 O XGBoost demonstrou o melhor desempenho médio (0.7955) e também atingiu o maior score máximo (0.9873), evidenciando um potencial muito alto em alguns subconjuntos de dados. Contudo, o desvio padrão elevado (0.2279) e o score mínimo de 0.3658 indicam que, embora potente, o modelo pode ser sensível a variações nos dados, mostrando instabilidade em determinados casos.
+
+# Rede Neural - Pytoch
+
+Para complementar a modelagem tradicional, foi desenvolvida uma rede neural utilizando PyTorch, com o objetivo de resolver o problema de regressão proposto.
+
+A arquitetura da rede foi composta por quatro camadas densas, com aplicação de Batch Normalization após cada uma delas, a fim de garantir uma melhor estabilidade do treinamento e acelerar a convergência. A função de ativação escolhida foi a LeakyReLU, que previne o problema do "desvanecimento do gradiente" nas regiões negativas. Além disso, foi incorporada a técnica de Dropout com uma taxa de 20% para reduzir o risco de overfitting, aumentando a generalização do modelo.
+
+O modelo foi otimizado utilizando o algoritmo Adam, bastante eficiente para esse tipo de tarefa, com uma taxa de aprendizado de 0.001. Como função de perda, foi adotado o Erro Quadrático Médio (MSE), que é o padrão para problemas de regressão, penalizando fortemente erros mais altos.
+
+O treinamento da rede neural foi conduzido por 500 épocas, onde em cada ciclo foi realizado:
+
+Ajuste dos pesos com base no erro observado,
+
+Minimização progressiva da função de perda,
+
+Armazenamento da evolução da perda para análise posterior.
+
+O monitoramento da perda ao longo das épocas permitiu avaliar a capacidade de aprendizado e a tendência de estabilização ou overfitting do modelo.
+
+Este processo demonstrou a eficácia das redes neurais profundas em capturar padrões complexos nos dados, comparando-se com os modelos tradicionais de regressão aplicados anteriormente.
+
+**Gráfico de perda da Rede Neural**
+
+![image](https://github.com/user-attachments/assets/73b9135b-a1e1-48bc-859e-a717fc4cda47)
+
+**Conclusão:**
+
+A rede neural apresentou boa convergência com os parâmetros definidos em sua arquitetura. A escolha de treinar o modelo por 500 épocas mostrou-se adequada, sendo suficiente para o aprendizado da rede neural. A queda drástica mostra que, aproximadamente, a partir da época 20, o erro se tornou insignificante.
+
+
+A rede neural obteve um Mean square error de: 0.0011560922721400857, indicando boa eficiencia entre os dados de teste. 
