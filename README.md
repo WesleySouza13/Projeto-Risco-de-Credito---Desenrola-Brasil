@@ -122,6 +122,133 @@ Se eu sou alto hoje, será que amanhã também serei alto?
 
  - Boa autocorrelação, que se mantém constante durante um tempo. Mas nao apresenta um score muito significativo. 
 
+# Modelagem:
+
+**Modelos utilizados na modelagem:**
+
+Árvore de Decisão (DecisionTreeRegressor)
+
+Regressão Linear (LinearRegression)
+
+XGBoost (XGBRegressor)
+
+AdaBoost (AdaBoostRegressor)
+
+Random Forest (RandomForestRegressor)
+
+Ridge (com alpha=0.1)
+
+Lasso (com alpha=0.1)
+
+Utilizei o MinMaxScaler para escalar os nossos dados, e o OneHot Encoder para fazer o encoder. 
+
+# Métricas do treinamento: 
+
+1. Melhor modelo: DecisionTreeRegressor
+
+R²: 0.77 
+
+MAE: ~197 mil
+
+MSE: ~9 tri
+
+Melhor desempenho geral, especialmente no R² e erro absoluto. Indica que o modelo consegue capturar bem as não linearidades do problema.
+
+2. XGBRegressor
+
+R²: 0.77 
+
+MAE: ~202 mil
+
+MSE: ~9 tri
+
+Excelente desempenho, muito próximo da árvore de decisão. Vantagem: maior robustez a overfitting e capacidade de generalização.
+
+3. RandomForestRegressor
+
+R²: 0.67
+
+MAE: ~170 mil 
+
+MSE: ~13 tri
+
+Apesar do menor R², apresentou um dos menores MAE. Pode indicar que é um modelo conservador, com boas previsões em média, mas que não explica toda a variância.
+
+4. AdaBoostRegressor
+
+R²: 0.70
+
+MAE: ~1 milhão
+
+MSE: ~12 tri
+
+Não conseguiu reduzir o erro absoluto, indicando dificuldade em ajustar aos dados.
+
+5. Modelos Lineares (LinearRegression, Ridge, Lasso)
+R²: ~0.575
+
+MAE: ~960 mil
+
+MSE: ~16 a 17 tri
+
+Pior desempenho geral, altos erros, explicam pouco da variância dos dados. Provavelmente, o problema é não linear, o que explica o fraco desempenho dos modelos lineares.
+
+# Optuna:
+
+**Utilizei o Optuna para ajuste de parametros do modelo, e escolhi para o estudo o modelo de arvore de decisao e o xgboost**
+
+---Resumo do estudo---
+
+O modelo de árvore de decisão apresentou melhores métricas com os parâmetros default, porém, para o nosso problema, é necessário um pouco mais de complexidade. Com isso, conduzi um estudo aprofundado com o segundo melhor modelo (XGBoost), utilizando o Optuna.
+
+Depois do estudo, observei que, com o aumento da complexidade do modelo de árvore de decisão, as métricas caíram de forma significativa.
+
+O contrário aconteceu com o XGBoost, que obteve quase 80% de explicação na variabilidade dos dados, com um MAE adequado para o nosso problema.
 
 
+**---- Métricas ----**
 
+ - metricas XGBoost (pós optuna): {'r2_score': 0.7776174521667012, 'mean_absolute_error': 192982.35, 'mean_ap_error': 5.802680771293433, 'mean_square_error': 8839704999617.56}
+
+
+ - métricas arvore de decisao (pós optuna) {'r2_score': 0.623834479833066, 'mean_absolute_error': 366904.74, 'mean_ap_error': 248.16838087138714, 'mean_square_error': 14952577266971.52}
+
+
+# Gráfico de predições
+
+![image](https://github.com/user-attachments/assets/a2bfb1fc-4cb6-4523-aa1c-f2abe4946910)
+
+
+# Cross Validate - Utilizando r2_score
+
+Cross-Validation — R² Score
+Resultados:
+Árvore de Decisão
+
+Score Máximo: 0.9515
+
+Score Mínimo: 0.2898
+
+Score Médio: 0.7813
+
+Desvio Padrão: 0.1925
+
+XGBoost
+
+Score Máximo: 0.9873
+
+Score Mínimo: 0.3658
+
+Score Médio: 0.7955
+
+Desvio Padrão: 0.2279
+
+# Interpretação dos Resultados de Cross-Validation — R² Score
+
+Árvore de Decisão:
+
+A Árvore de Decisão apresentou um score médio alto (0.7813), o que indica uma boa capacidade preditiva na média. No entanto, o desvio padrão de 0.1925 revela uma certa variabilidade entre os folds, o que significa que o desempenho do modelo pode oscilar dependendo do subconjunto de dados utilizado na validação. O score mínimo relativamente baixo (0.2898) reforça essa instabilidade em alguns cenários.
+
+XGBoost:
+
+O XGBoost demonstrou o melhor desempenho médio (0.7955) e também atingiu o maior score máximo (0.9873), evidenciando um potencial muito alto em alguns subconjuntos de dados. Contudo, o desvio padrão elevado (0.2279) e o score mínimo de 0.3658 indicam que, embora potente, o modelo pode ser sensível a variações nos dados, mostrando instabilidade em determinados casos.
